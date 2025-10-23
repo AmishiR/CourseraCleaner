@@ -53,9 +53,9 @@ if st.button("Clean & Generate Answer"):
                 st.error(f"Error generating Gemini response: {e}")
 st.markdown(
     """
-    <div style='position: fixed; bottom: 10px; right: 10px; 
-                font-size: 12px; color: gray;'>
-        Made by Amishi
+    <div style='position: fixed; bottom: 5px; right: 5px; 
+                font-size: 12px; color: gray; opacity: 0.7; z-index: 9999;'>
+        Made by Amishi 🤍
     </div>
     """,
     unsafe_allow_html=True
