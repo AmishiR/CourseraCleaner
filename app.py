@@ -25,6 +25,7 @@ st.title("📋 CopyPastePro – Coursera Clean & Copy Made Easy")
 
 input_text = st.text_area("Paste your text here:", height=250)
 
+# === Button to clean & generate answer ===
 if st.button("Clean & Generate Answer"):
     if not input_text.strip():
         st.warning("Please paste some text first.")
@@ -48,15 +49,8 @@ if st.button("Clean & Generate Answer"):
                 st.subheader("🤖 Gemini’s Answer:")
                 st.text_area("Answer:", answer, height=200)
 
-                # === Visible credit below generated content ===
-                st.markdown(
-                    """
-                    <p style='text-align:center; color:gray; font-size:14px; margin-top:20px;'>
-                        Made by Amishi 🤍
-                    </p>
-                    """,
-                    unsafe_allow_html=True
-                )
-
             except Exception as e:
                 st.error(f"Error generating Gemini response: {e}")
+
+# === Credit visible below button, same font size as default Streamlit text ===
+st.write("Made by Amishi 🤍")
